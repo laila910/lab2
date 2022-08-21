@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<body>
+    <!-- Ask the user to enter his age. You must validate the user input (positive numbers only)
+    Show the status of the user knowing that
+    Child is between 1-10
+    Teenager is between 11-18
+    Grown up is between 19-50
+    Old is greater than 50
+    keep asking the user to enter another age until he clicks cancel  -->
+   
+    <script>
+// task1
+ var flag=true;
+      while(flag){
+       
+        var num1 = prompt("please enter your age:");
+        var num = Math.abs(Number(num1));
+        if(num <0){
+        alert("try again");
+
+       }else if(num>=1 && num <=10){
+        alert("you are child");
+       }else if(num>=11 && num<=18){
+        alert("you are tenageer");
+       }else if (num >=19 && num<=50){
+        alert("you are grown up");
+       }else if (num > 50){
+        alert("you are old");
+
+       }else{
+        alert("user cancel");
+        falg=false;
+        
+       }
+    }
+
+    
+    
+
+    </script>
+</body>
+</html>

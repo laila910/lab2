@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+<body>
+    <!-- Write a JavaScript program to convert the 24 hour clock to 12 , adding am or pm based on its value.
+    Examples 
+   
+   0 -> 12AM
+    11 -> 11AM
+    13 -> 1PM  -->
+    <script>
+function formatDate(input) {
+ 
+  var hours = input;
+
+  var dd = "AM";
+  var h = hours;
+  if (h >= 12) {
+    h = hours - 12;
+    dd = "PM";
+  }
+  if (h == 0) {
+    h = 12;
+  }
+
+  var pattern = new RegExp("0?" + hours );
+
+  var replacement = h;
+ 
+  replacement += " " + dd;
+
+  return input.replace(pattern, replacement);
+}
+
+alert(formatDate("12"));
+alert(formatDate("18"));
+alert(formatDate("19"));
+
+    </script>
+</body>
+</html>
